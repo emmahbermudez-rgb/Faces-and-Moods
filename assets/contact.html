@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacto - Faces and moods</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="brand"><div class="logo">Fm</div><a href="index.html" class="brand-name">Faces and moods</a></div>
+    <nav style="display:flex;align-items:center;gap:12px">
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <div id="navLinks" class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">About us</a>
+        <a href="catalog.html">Catálogo</a>
+        <a href="cart.html">Mi carrito <span id="cartCount" style="background:var(--accent);color:white;padding:2px 6px;border-radius:8px;margin-left:6px">0</span></a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      <div class="search">
+        <form id="searchForm" onsubmit="return false;">
+          <input id="searchInput" placeholder="Buscar productos..." />
+          <button class="btn" onclick="document.getElementById('searchForm').dispatchEvent(new Event('submit'))">🔎</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="container" style="padding-top:96px">
+  <h1>Contacto</h1>
+  <div class="grid-3" style="margin-top:12px">
+    <div class="card">
+      <h4>Escríbenos</h4>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Gracias — demo');">
+        <input class="input" placeholder="Nombre completo" />
+        <input class="input" placeholder="Correo electrónico" type="email" />
+        <input class="input" placeholder="Teléfono" />
+        <textarea placeholder="¿En qué podemos ayudarte?"></textarea>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="btn primary">Enviar mensaje</button>
+          <div class="small muted">Responderemos en 1-2 días hábiles (demo)</div>
+        </div>
+      </form>
+    </div>
+    <div class="card">
+      <h4>Datos</h4>
+      <p class="small">hola@facesandmoods.example</p>
+      <p class="small">+57 300 000 0000</p>
+      <p class="small">Local: Barranquilla, Colombia</p>
+    </div>
+    <div class="card">
+      <h4>Preguntas frecuentes</h4>
+      <p class="small muted">Envíos, tiempos de fabricación y cuidados de las piezas.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid">
+      <div class="col">
+        <h3>Faces and moods</h3>
+        <p class="small">Cerámica artesana — tazas, platos y objetos con carácter.</p>
+      </div>
+      <div class="col">
+        <h4>Contacto</h4>
+        <p class="small">email: hola@facesandmoods.example</p>
+        <p class="small">tel: +57 300 000 0000</p>
+      </div>
+      <div class="col">
+        <h4>Síguenos</h4>
+        <p class="small">Instagram · Facebook · TikTok</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
