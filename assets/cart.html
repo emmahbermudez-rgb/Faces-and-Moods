@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi carrito - Faces and moods</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="brand"><div class="logo">Fm</div><a href="index.html" class="brand-name">Faces and moods</a></div>
+    <nav style="display:flex;align-items:center;gap:12px">
+      <button id="menuToggle" class="menu-toggle" aria-label="Menu">☰</button>
+      <div id="navLinks" class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">About us</a>
+        <a href="catalog.html">Catálogo</a>
+        <a href="cart.html">Mi carrito <span id="cartCount" style="background:var(--accent);color:white;padding:2px 6px;border-radius:8px;margin-left:6px">0</span></a>
+        <a href="contact.html">Contacto</a>
+      </div>
+      <div class="search">
+        <form id="searchForm" onsubmit="return false;">
+          <input id="searchInput" placeholder="Buscar productos..." />
+          <button class="btn" onclick="document.getElementById('searchForm').dispatchEvent(new Event('submit'))">🔎</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="container" style="padding-top:96px">
+  <h1>Mi carrito</h1>
+  <div class="card" style="margin-top:12px">
+    <p class="muted">Este carrito es demo: los artículos añadidos durante la sesión aparecerán aquí.</p>
+    <div id="cartItems"></div>
+    <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+      <button class="btn primary" onclick="alert('Proceder al pago (demo)')">Pagar ahora</button>
+      <button class="btn" onclick="window.cart=[]; document.getElementById('cartItems').innerHTML=''; document.getElementById('cartCount').innerText=0;">Vaciar carrito</button>
+    </div>
+  </div>
+  <script>
+    // render cart items (simple)
+    function renderCart(){
+      const container = document.getElementById('cartItems');
+      if(!container) return;
+      const cart = window.cart || [];
+      if(cart.length===0){ container.innerHTML='<p class="small muted">Tu carrito está vacío.</p>'; return; }
+      container.innerHTML = cart.map(i=>`<div style="display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.04)"><div style="flex:1"><b>${''}+i.title</b><div class="small muted">${''}+i.qty+' × $'+i.price.toFixed(2)}</div></div><div style="width:120px;text-align:right"><b>$${''}+ (i.qty*i.price).toFixed(2)}</b></div></div>`).join('');
+    }
+    setInterval(renderCart,500);
+  </script>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid">
+      <div class="col">
+        <h3>Faces and moods</h3>
+        <p class="small">Cerámica artesana — tazas, platos y objetos con carácter.</p>
+      </div>
+      <div class="col">
+        <h4>Contacto</h4>
+        <p class="small">email: hola@facesandmoods.example</p>
+        <p class="small">tel: +57 300 000 0000</p>
+      </div>
+      <div class="col">
+        <h4>Síguenos</h4>
+        <p class="small">Instagram · Facebook · TikTok</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
