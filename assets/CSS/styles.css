@@ -1,6 +1,6 @@
 /* styles.css - Faces and moods (responsive static site) */
 :root{
-  --accent:#b76e79;
+  --accent:#7a5413dc;
   --muted:#6b6b6b;
   --bg:#faf7f6;
   --card:#fff;
@@ -13,13 +13,22 @@ a{text-decoration:none;color:inherit}
 
 /* Navigation */
 .header{
-  position:fixed;top:0;left:0;right:0;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.75));
-  backdrop-filter: blur(6px);z-index:1000;border-bottom:1px solid rgba(0,0,0,0.05);
+  color: #ffffff;
+  position:fixed;top:0;left:0;right:0;background:linear-gradient(180deg,rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.75));
+  backdrop-filter: blur(6px);z-index:1000;border-bottom:1px solid rgb(255, 255, 255);
 }
 .header .container{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;gap:12px;align-items:center;font-weight:700;font-size:18px}
-.logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#f09e9e);display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
-.nav{
+.logo{
+  margin-right: auto;
+  width:auto;height:auto;align-items:center;justify-content:center;color:white;font-weight:800}
+.moods{
+  width: 100px;
+  height: auto;
+  border-radius:10px;
+}
+
+  .nav{
   display:flex;align-items:center;gap:14px;
 }
 .nav a{padding:8px 10px;border-radius:8px;transition:background .15s}
