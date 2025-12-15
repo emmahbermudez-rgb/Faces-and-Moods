@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About us - Faces and moods</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+ 
+  <!-- NAV Logo -->
+
+  <header class="header">
+  <div class="container">
+    <div class="brand">
+      <div class="logo">
+        <a href="index.html" class="brand-name">
+          <img src="IMG/faces and moods.jpg" alt="logo" class="moods">
+        </a>
+      </div>
+    </div>
+
+    <!-- NAV del menu  -->
+
+    <nav class="main-nav">
+      <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+      <div id="navLinks" class="nav" aria-hidden="true">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">About us</a>
+        <a href="catalog.html">Catálogo</a>
+        <a href="cart.html">Mi carrito <span id="cartCount" style="background:var(--accent);color:white;padding:2px 6px;border-radius:8px;margin-left:6px">0</span></a>
+        <a href="contact.html">Contacto</a>
+      </div>
+
+      <!-- nav barra de busqueda -->
+
+      <div id="searchContainer" class="search">
+        <form id="searchForm" class="search-form" onsubmit="return false;">
+          <input id="searchInput" class="search-input" placeholder="Buscar productos..." />
+          <button id="searchToggle" class="btn search-btn" aria-label="Buscar">🔎</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+
+    <!-- Seccion 1-->
+
+    <section class="hero container">
+      <div class="panel">
+        <div class="left">
+          <h1>Sobre nosotros</h1>
+          <p>Faces and moods nace de la pasión por la cerámica y la expresión. Cada pieza es única, hecha a mano por
+            artesanos locales.</p>
+        </div>
+        <div class="right" style="width:260px">
+          <img
+            src="IMG/Female Alchemy.jpg"
+            alt="Nuestro Taller" style="width:100%;border-radius:12px" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Seccion 2-->
+
+
+    <section class="container">
+      <h2>Nuestra filosofía</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h4>Hecho a mano</h4>
+          <p class="small muted">Cada pieza tiene procesos artesanales y pequeñas variaciones que hacen únicas a las
+            tazas.</p>
+        </div>
+        <div class="card">
+          <h4>Sostenible</h4>
+          <p class="small muted">Materiales locales y acabados que buscan reducir el impacto ambiental.</p>
+        </div>
+        <div class="card">
+          <h4>Diseño</h4>
+          <p class="small muted">Formas y caras que conectan con estados de ánimo y momentos del día.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid">
+        <div class="col">
+          <h3>Faces and moods</h3>
+          <p class="small">Cerámica artesana — tazas, platos y objetos con carácter.</p>
+        </div>
+        <div class="col">
+          <h4>Contacto</h4>
+          <p class="small">email: hola@facesandmoods.co.com</p>
+          <p class="small">tel: +57 300 123 4567</p>
+        </div>
+        <div class="col">
+          <h4>Síguenos</h4>
+          <p class="small">Instagram · Facebook · TikTok</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="JSS/script.js"></script>
+</body>
+
+</html>
