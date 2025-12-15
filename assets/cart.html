@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mi carrito - Faces and moods</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+  
+  <!-- NAV Logo -->
+
+  <header class="header">
+  <div class="container">
+    <div class="brand">
+      <div class="logo">
+        <a href="index.html" class="brand-name">
+          <img src="IMG/faces and moods.jpg" alt="logo" class="moods">
+        </a>
+      </div>
+    </div>
+
+    <!-- NAV del menu  -->
+
+    <nav class="main-nav">
+      <button id="menuToggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+      <div id="navLinks" class="nav" aria-hidden="true">
+        <a href="index.html">Inicio</a>
+        <a href="about.html">About us</a>
+        <a href="catalog.html">Catálogo</a>
+        <a href="cart.html">Mi carrito <span id="cartCount" style="background:var(--accent);color:white;padding:2px 6px;border-radius:8px;margin-left:6px">0</span></a>
+        <a href="contact.html">Contacto</a>
+      </div>
+
+      <!-- nav barra de busqueda -->
+
+      <div id="searchContainer" class="search">
+        <form id="searchForm" class="search-form" onsubmit="return false;">
+          <input id="searchInput" class="search-input" placeholder="Buscar productos..." />
+          <button id="searchToggle" class="btn search-btn" aria-label="Buscar">🔎</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+
+ <!-- Fromula del carrito  -->
+  
+  <main>
+    <section class="container" style="padding-top:96px">
+      <h1>Mi carrito</h1>
+      <div class="card" style="margin-top:12px">
+        <p class="muted">Este carrito es demo: los artículos añadidos durante la sesión aparecerán aquí.</p>
+        <div id="cartItems"></div>
+        <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+          <button class="btn primary" onclick="alert('Proceder al pago (demo)')">Pagar ahora</button>
+          <button class="btn"
+            onclick="window.cart=[]; document.getElementById('cartItems').innerHTML='';
+             document.getElementById('cartCount').innerText=0;" onclick="vaciarCarrito()">Vaciar
+            carrito</button>
+        </div>
+      </div>
+      
+    </section>
+
+  </main>
+
+   <!-- Footer -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid">
+        <div class="col">
+          <h3>Faces and moods</h3>
+          <p class="small">Cerámica artesana — tazas, platos y objetos con carácter.</p>
+        </div>
+        <div class="col">
+          <h4>Contacto</h4>
+          <p class="small">email: hola@facesandmoods.co.com</p>
+          <p class="small">tel: +57 300 123 4567</p>
+        </div>
+        <div class="col">
+          <h4>Síguenos</h4>
+          <p class="small">Instagram · Facebook · TikTok</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="JSS/script.js"></script>
+</body>
+
+</html>
